@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Индекс Драйв</title>
+
+		<link rel="stylesheet" href="./assets/css/index.css">
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav>
+			<div class="container">
+				<a href="./index.html" class="nav__logo">
+					<p class="logo">Индекс Драйв</p>
+				</a>
+	
+				<!-- Navbar items -->
+				<div class="nav__items">
+					<a href="#" class="nav__item">
+						Акции
+					</a>
+					<a href="#" class="nav__item">
+						Бронирование
+					</a>
+					<a href="./profile.html" class="nav__item">
+						Личный кабинет
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- "Login" section -->
+		<main class="section" id="form">
+			<div class="container">
+				<div class="title-row">
+					<h2>Банковские карты</h2>
+					<div class="buttons">
+						<button onclick="window.cards.openModal()" class="button button__primary">
+							Добавить
+						</button>
+					</div>
+				</div>
+
+				<div class="bank__row">
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<!-- Navigation -->
+				<div class="footer__column">
+					<p class="logo">Индекс Драйв</p>
+					<div class="footer__row">
+						<a href="#" class="footer__link">
+							Акции
+						</a>
+						<a href="#" class="footer__link">
+							Бронирование
+						</a>
+						<a href="#" class="footer__link">
+							Личный кабинет
+						</a>
+					</div>
+				</div>
+
+				<!-- Contacts -->
+				<div class="footer__column footer__column-right">
+					<a href="tel:88001111111" class="footer__contact">8 (800) 111-11-11</a>
+					<a href="mailto:info@indexdrive.ru" class="footer__contact">info@indexdrive.ru</a>
+				</div>
+
+				<!-- Legal entity -->
+				<div class="footer__column footer__column-fill">
+					<hr>
+					<small class="footer__small">ООО "ИНДЕКС ДРАЙВ", Все права защищены.</small>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Modals -->
+		<div class="modal__container" id="addCardModal">
+			<form id="addCardForm" class="modal form">
+				<p class="modal__title">
+					Добавить карту
+				</p>
+
+				<p id="addCardModalErr" class="modal__error"></p>
+
+				<div class="input-container">
+					<label for="card" class="label">Номер карты</label>
+					<input class="input" required type="text" minlength="16" maxlength="16" name="card" placeholder="Введите номер карты">
+				</div>
+				
+				<div class="input-container">
+					<label for="card_holder" class="label">Имя и фамилия держателя карты (латиницей)</label>
+					<input class="input" required type="text" name="card_holder" placeholder="Введите имя и фамилию">
+				</div>
+
+				<div class="input-container">
+					<label for="card_endtime" class="label">Дата окончания карты</label>
+					<input class="input" required type="date" name="card_endtime">
+				</div>
+
+				<div class="input-container">
+					<label for="card_cvv" class="label">CVV/CVC</label>
+					<input class="input" required type="number" minlength="3" maxlength="3" min="111" max="999" name="card_cvv" placeholder="Введите CVV/CVC">
+				</div>
+
+				<button type="submit" class="button button__primary">Добавить</button>
+			</form>
+		</div>
+
+		<script src="./assets/js/cards.js"></script>
+	</body>
+</html>

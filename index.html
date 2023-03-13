@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Индекс Драйв</title>
+
+		<link rel="stylesheet" href="./assets/css/index.css">
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav>
+			<div class="container">
+				<a href="./index.html" class="nav__logo">
+					<p class="logo">Индекс Драйв</p>
+				</a>
+	
+				<!-- Navbar items -->
+				<div class="nav__items">
+					<a href="#" class="nav__item">
+						Акции
+					</a>
+					<a href="#" class="nav__item">
+						Бронирование
+					</a>
+					<a href="./profile.html" class="nav__item">
+						Личный кабинет
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- "Trusted" section -->
+		<header class="section" id="trusted">
+			<div class="container">
+				<h1>Нам доверяют<br>15&#160;500+ водителей</h1>
+				<p>Проверенный сервис по аренде машин,<br> без предоплаты и прочих формальностей.</p>
+				<a href="#" class="button button__primary">
+					Арендовать машину
+				</a>
+			</div>
+		</header>
+
+		<!-- "Search auto" section -->
+		<section class="section" id="search">
+			<div class="container">
+				<div class="form">
+					<h2>Поиск автомобилей</h2>
+
+					<div class="input-container">
+						<label class="label" for="car_class">Класс автомобиля</label>
+						<select name="car_class" class="input">
+							<option value="" disabled selected>Выберите класс</option>
+							<option value="economy">Эконом</option>
+							<option value="premium">Премиум</option>
+						</select>
+					</div>
+
+					<div class="input-container">
+						<label class="label" for="car_mark">Марка</label>
+						<select name="car_mark" class="input">
+							<option value="" disabled selected>Выберите марку</option>
+							<option value="lada">Lada</option>
+							<option value="toyota">Toyota</option>
+							<option value="bmw">BMW</option>
+							<option value="audi">Audi</option>
+						</select>
+					</div>
+
+					<div class="input-container">
+						<label class="label" for="car_model">Модель</label>
+						<select name="car_model" class="input">
+							<option value="" disabled selected>Выберите модель</option>
+							<option value="cx1">CX1</option>
+							<option value="cx2">CX2</option>
+							<option value="x20">X20</option>
+						</select>
+					</div>
+
+					<a href="./booking.html" class="button button__primary">Искать</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- "News" section -->
+		<section class="section" id="news">
+			<div class="container">
+				<h2>Новости</h2>
+
+				<div class="blog__row">
+					<a href="#" class="card blog__card">
+						<img class="card__image" src="./assets/img/blog_post_1.jpg">
+						<div class="card__body">
+							<p class="card__title">Как правильно выбрать автомобиль?</p>
+							<p class="card__text">Рассказываем вам о том, по каким параметрам выбирать.</p>
+							<button class="button button__primary card__button">Читать</button>
+						</div>
+					</a>
+					<a href="#" class="card blog__card">
+						<img class="card__image" src="./assets/img/blog_post_1.jpg">
+						<div class="card__body">
+							<p class="card__title">Как правильно выбрать автомобиль?</p>
+							<p class="card__text">Рассказываем вам о том, по каким параметрам выбирать.</p>
+							<button class="button button__primary card__button">Читать</button>
+						</div>
+					</a>
+					<a href="#" class="card blog__card">
+						<img class="card__image" src="./assets/img/blog_post_1.jpg">
+						<div class="card__body">
+							<p class="card__title">Как правильно выбрать автомобиль?</p>
+							<p class="card__text">Рассказываем вам о том, по каким параметрам выбирать.</p>
+							<button class="button button__primary card__button">Читать</button>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<!-- Navigation -->
+				<div class="footer__column">
+					<p class="logo">Индекс Драйв</p>
+					<div class="footer__row">
+						<a href="#" class="footer__link">
+							Акции
+						</a>
+						<a href="#" class="footer__link">
+							Бронирование
+						</a>
+						<a href="#" class="footer__link">
+							Личный кабинет
+						</a>
+					</div>
+				</div>
+
+				<!-- Contacts -->
+				<div class="footer__column footer__column-right">
+					<a href="tel:88001111111" class="footer__contact">8 (800) 111-11-11</a>
+					<a href="mailto:info@indexdrive.ru" class="footer__contact">info@indexdrive.ru</a>
+				</div>
+
+				<!-- Legal entity -->
+				<div class="footer__column footer__column-fill">
+					<hr>
+					<small class="footer__small">ООО "ИНДЕКС ДРАЙВ", Все права защищены.</small>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

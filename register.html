@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Индекс Драйв</title>
+
+		<link rel="stylesheet" href="./assets/css/index.css">
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav>
+			<div class="container">
+				<a href="./index.html" class="nav__logo">
+					<p class="logo">Индекс Драйв</p>
+				</a>
+	
+				<!-- Navbar items -->
+				<div class="nav__items">
+					<a href="#" class="nav__item">
+						Акции
+					</a>
+					<a href="#" class="nav__item">
+						Бронирование
+					</a>
+					<a href="./profile.html" class="nav__item">
+						Личный кабинет
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- "Register" section -->
+		<main class="section" id="form">
+			<div class="container">
+				<div class="form form-md">
+					<h2>Регистрация аккаунта</h2>
+
+					<div class="input-container input-container-half">
+						<label class="label" for="name">Имя</label>
+						<input required name="name" placeholder="Введите имя" type="text" class="input">
+					</div>
+
+					<div class="input-container input-container-half">
+						<label class="label" for="last_name">Фамилия</label>
+						<input required name="last_name" placeholder="Введите фамилию" type="text" class="input">
+					</div>
+
+					<div class="input-container input-container-half">
+						<label class="label" for="surname">Отчество</label>
+						<input required name="surname" placeholder="Введите отчество" type="text" class="input">
+					</div>
+
+					<div class="input-container input-container-half">
+						<label class="label" for="passport">Паспортные данные</label>
+						<input required name="passport" placeholder="Введите паспортные данные" type="number" class="input">
+					</div>
+					
+					<div class="input-container">
+						<label class="label" for="phone">Телефон</label>
+						<input required name="phone" placeholder="Введите телефон" type="tel" class="input">
+					</div>
+
+					<div class="input-container">
+						<label class="label" for="birthdate">Дата рождения</label>
+						<input required name="birthdate" placeholder="Введите дату рождения" type="date" class="input">
+					</div>
+
+					<div class="input-container input-container-half">
+						<label class="label" for="password">Пароль</label>
+						<input required name="password" placeholder="Введите пароль" type="password" class="input">
+					</div>
+					<div class="input-container input-container-half">
+						<label class="label" for="repeat_password">Повтор пароля</label>
+						<input required name="repeat_password" placeholder="Введите пароль" type="password" class="input">
+					</div>
+
+					<button class="button button__primary">Зарегистрироваться</button>
+				</div>
+			</div>
+		</main>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<!-- Navigation -->
+				<div class="footer__column">
+					<p class="logo">Индекс Драйв</p>
+					<div class="footer__row">
+						<a href="#" class="footer__link">
+							Акции
+						</a>
+						<a href="#" class="footer__link">
+							Бронирование
+						</a>
+						<a href="#" class="footer__link">
+							Личный кабинет
+						</a>
+					</div>
+				</div>
+
+				<!-- Contacts -->
+				<div class="footer__column footer__column-right">
+					<a href="tel:88001111111" class="footer__contact">8 (800) 111-11-11</a>
+					<a href="mailto:info@indexdrive.ru" class="footer__contact">info@indexdrive.ru</a>
+				</div>
+
+				<!-- Legal entity -->
+				<div class="footer__column footer__column-fill">
+					<hr>
+					<small class="footer__small">ООО "ИНДЕКС ДРАЙВ", Все права защищены.</small>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

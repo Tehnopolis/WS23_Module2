@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Индекс Драйв</title>
+
+		<link rel="stylesheet" href="./assets/css/index.css">
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav>
+			<div class="container">
+				<a href="./index.html" class="nav__logo">
+					<p class="logo">Индекс Драйв</p>
+				</a>
+	
+				<!-- Navbar items -->
+				<div class="nav__items">
+					<a href="#" class="nav__item">
+						Акции
+					</a>
+					<a href="#" class="nav__item">
+						Бронирование
+					</a>
+					<a href="./profile.html" class="nav__item">
+						Личный кабинет
+					</a>
+				</div>
+			</div>
+		</nav>
+
+		<!-- "Search auto" section -->
+		<section class="section" id="search">
+			<div class="container">
+				<div class="form form__transparent">
+					<div class="input-row">
+						<div class="input-container">
+							<label class="label" for="car_mark">Марка</label>
+							<select name="car_mark" class="input">
+								<option value="" disabled selected>Выберите марку</option>
+								<option value="lada">Lada</option>
+								<option value="toyota">Toyota</option>
+								<option value="bmw">BMW</option>
+								<option value="audi">Audi</option>
+							</select>
+						</div>
+	
+						<div class="input-container">
+							<label class="label" for="car_model">Модель</label>
+							<select name="car_model" class="input">
+								<option value="" disabled selected>Выберите модель</option>
+								<option value="cx1">CX1</option>
+								<option value="cx2">CX2</option>
+								<option value="x20">X20</option>
+							</select>
+						</div>
+	
+						<div class="input-container">
+							<label class="label" for="booking_day">Дата бронирования</label>
+							<input name="booking_day" class="input" type="date">
+						</div>
+	
+						<div class="input-container">
+							<label class="label" for="return_day">Дата возврата</label>
+							<input name="return_day" class="input" type="date">
+						</div>
+	
+						<button class="button button__primary">Искать</button>
+					</div>
+
+					<h2>Результаты поиска</h2>
+					<div class="booking__row">
+						<div data-car-id="HND-510" data-car-price="1000" class="card booking__card style-solid">
+							<img src="./assets/img/car.webp" alt="Car" class="card__image">
+							<div class="card__body">
+								<p class="card__title">HND-510</p>
+								<p class="card__text">
+									<span>Марка:</span> Honda
+								</p>
+								<p class="card__text">
+									<span>Название:</span> Honda CX-10
+								</p>
+								<p class="card__text">
+									<span>Номер:</span> В456ТУ
+								</p>
+								<p class="card__text">
+									<span>Филиал:</span> Москва
+								</p>
+								<p class="card__text">
+									<span class="primary">Цена:</span> 1000 руб. / день
+								</p>
+								<button class="button button__primary card__button style-fill">
+									Бронировать
+								</button>
+							</div>
+						</div>
+						<div data-car-id="HND-560" data-car-price="2250" class="card booking__card style-solid">
+							<img src="./assets/img/car.webp" alt="Car" class="card__image">
+							<div class="card__body">
+								<p class="card__title">HND-560</p>
+								<p class="card__text">
+									<span>Марка:</span> Honda
+								</p>
+								<p class="card__text">
+									<span>Название:</span> Honda CX-10
+								</p>
+								<p class="card__text">
+									<span>Номер:</span> В456ТУ
+								</p>
+								<p class="card__text">
+									<span>Филиал:</span> Москва
+								</p>
+								<p class="card__text">
+									<span class="primary">Цена:</span> 2250 руб. / день
+								</p>
+								<button class="button button__primary card__button style-fill">
+									Бронировать
+								</button>
+							</div>
+						</div>
+						<div data-car-id="HND-900" data-car-price="3400" class="card booking__card style-solid">
+							<img src="./assets/img/car.webp" alt="Car" class="card__image">
+							<div class="card__body">
+								<p class="card__title">HND-900</p>
+								<p class="card__text">
+									<span>Марка:</span> Honda
+								</p>
+								<p class="card__text">
+									<span>Название:</span> Honda CX-10
+								</p>
+								<p class="card__text">
+									<span>Номер:</span> В456ТУ
+								</p>
+								<p class="card__text">
+									<span>Филиал:</span> Москва
+								</p>
+								<p class="card__text">
+									<span class="primary">Цена:</span> 3400 руб. / день
+								</p>
+								<button class="button button__primary card__button style-fill">
+									Бронировать
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form form-md">
+					<h2>Оформить бронь</h2>
+
+					<p id="formErr" class="form__error"></p>
+
+					<div class="form__price">
+						<p id="booking_price" class="price-old"></p>
+						<p id="booking_price_final" class="price-new"></p>
+					</div>
+					
+					<div class="input-container input-container-half">
+						<label class="label" for="name">Имя</label>
+						<input required name="name" placeholder="Введите имя" type="text" class="input">
+					</div>
+
+					<div class="input-container input-container-half">
+						<label class="label" for="last_name">Фамилия</label>
+						<input required name="last_name" placeholder="Введите фамилию" type="text" class="input">
+					</div>
+
+					<div class="input-container input-container-half">
+						<label class="label" for="surname">Отчество</label>
+						<input required name="surname" placeholder="Введите отчество" type="text" class="input">
+					</div>
+					<div class="input-container input-container-half">
+						<label class="label" for="passport">Паспортные данные</label>
+						<input required name="passport" placeholder="Введите паспортные данные" type="number" class="input">
+					</div>
+					
+					<div class="input-container">
+						<label class="label" for="phone">Телефон</label>
+						<input required name="phone" placeholder="Введите телефон" type="tel" class="input">
+					</div>
+
+					<div class="input-container">
+						<label class="label" for="birthdate">Дата рождения</label>
+						<input required name="birthdate" placeholder="Введите дату рождения" type="date" class="input">
+					</div>
+
+					<div class="input-container">
+						<label class="label" for="card">Банковская карта</label>
+						<select required name="card" class="input">
+							<option value="" disabled selected>Выберите карту</option>
+							<option>•••• •••• •••• 1111</option>
+							<option>•••• •••• •••• 2222</option>
+							<option>•••• •••• •••• 3333</option>
+						</select>
+					</div>
+
+					<button class="button button__primary">Забронировать</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<!-- Navigation -->
+				<div class="footer__column">
+					<p class="logo">Индекс Драйв</p>
+					<div class="footer__row">
+						<a href="#" class="footer__link">
+							Акции
+						</a>
+						<a href="#" class="footer__link">
+							Бронирование
+						</a>
+						<a href="#" class="footer__link">
+							Личный кабинет
+						</a>
+					</div>
+				</div>
+
+				<!-- Contacts -->
+				<div class="footer__column footer__column-right">
+					<a href="tel:88001111111" class="footer__contact">8 (800) 111-11-11</a>
+					<a href="mailto:info@indexdrive.ru" class="footer__contact">info@indexdrive.ru</a>
+				</div>
+
+				<!-- Legal entity -->
+				<div class="footer__column footer__column-fill">
+					<hr>
+					<small class="footer__small">ООО "ИНДЕКС ДРАЙВ", Все права защищены.</small>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="./assets/js/booking.js"></script>
+	</body>
+</html>
